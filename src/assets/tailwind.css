@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Tailwind common styles */
+.bordered {
+    @apply border border-solid border-slate-200
+}
+
+.input {
+    @apply w-full text-left h-12 bg-white rounded-md border border-solid border-slate-300 px-3 py-2 text-lg transition focus:border-blue-500 focus-visible:border-blue-500
+}
+
+.container {
+    @apply mx-auto max-w-7xl px-5
+}

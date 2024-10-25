@@ -14,6 +14,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    "paths": {
+      "@/*": ["./src/*"],
+      "@img/*": ["./public/img/*"],
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

@@ -1,0 +1,98 @@
+html {
+    @media screen and (max-width: 901px) {
+        font-size: 14px;
+    }
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+input[type="date"]
+{
+    display:block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: left;
+    -ms-text-align-last: left;
+    text-align-last: left;
+}
+
+
+body {
+    font-family: var(--font-main);
+    font-weight: 400;
+    color: var(--slate-900);
+}
+
+a,
+span,
+label {
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+.hover-link {
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        right: 0;
+        bottom: 0;
+        transition: 0.3s ease;
+        background: var(--blue);
+    }
+
+    &:hover {
+        color: var(--blue);
+
+        &:before {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+    }
+}
+
+.error {
+    animation: show-error 0.3s ease;
+}
+
+/* Toast */
+.Vue-Toastification__container {
+    @media screen and (max-width: 600px) {
+        align-items: flex-end;
+    }
+}
+
+.Vue-Toastification__toast {
+    border-radius: 8px !important;
+    align-items: center;
+
+    @media screen and (max-width: 600px) {
+        padding: 12px;
+        width: 90% !important;
+    }
+}
+
+.Vue-Toastification__toast-body {
+    @media screen and (max-width: 600px) {
+        font-size: 14px;
+    }
+}
