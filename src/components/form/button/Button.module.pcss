@@ -1,0 +1,23 @@
+.button {
+    @apply bg-blue-500 hover:bg-blue-700 text-center justify-center flex items-center gap-3 rounded-md font-semibold text-white transition disabled:opacity-60 disabled:pointer-events-none;
+
+    &.success {
+        @apply bg-green-500 hover:bg-green-600
+    }
+
+    &.error {
+        @apply bg-red-500 text-white hover:bg-red-600
+    }
+
+    &.secondary {
+        @apply border-2 border-solid border-blue-500 bg-transparent text-blue-500 hover:bg-blue-500 hover:text-white
+    }
+
+    &.sm {
+        @apply gap-2 p-2 text-sm
+    }
+
+    &.lg {
+        @apply px-3 py-2 text-lg
+    }
+}
