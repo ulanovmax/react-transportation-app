@@ -1,13 +1,18 @@
-import {Outlet} from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+import Header from '@/components/layout/Header.tsx';
 
 const MainPage = () => {
     return (
         <>
-            <h1 className="text-3xl font-bold">Home page</h1>
+            <Header />
 
-            <Outlet/>
+            <main className="flex-grow py-10">
+                <div className="container">
+                    <Outlet />
+                </div>
+            </main>
         </>
-    )
-}
+    );
+};
 
-export default MainPage
+export default MainPage;
