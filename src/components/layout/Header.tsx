@@ -62,7 +62,7 @@ const Header = () => {
                             </Button>
 
                             <Button onClick={logout} variant="error">
-                                Cancel
+                                Confirm
                             </Button>
                         </div>
                     </div>

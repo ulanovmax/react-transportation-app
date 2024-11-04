@@ -6,7 +6,7 @@ const MainPage = () => {
         <>
             <Header />
 
-            <main className="flex-grow py-10">
+            <main className="flex-grow pt-10 pb-20">
                 <div className="container">
                     <Outlet />
                 </div>
