@@ -1,5 +1,6 @@
 import DotsLoader from '@/components/feedback/loader/DotsLoader.tsx';
-import { ChangeEvent } from 'react';
+import { ChangeEvent, ComponentType } from 'react';
+import { IconProps } from '@tabler/icons-react';
 
 export interface InputProps {
     value: string | number;
@@ -9,7 +10,7 @@ export interface InputProps {
     placeholder?: string;
     label?: string;
     loading?: boolean;
-    icon?: string;
+    icon?: ComponentType<IconProps>;
     error?: string;
     required?: boolean;
     disabled?: boolean;
@@ -17,6 +18,14 @@ export interface InputProps {
 }
 
 const Input = (props: InputProps) => {
+    const InputIcon = (Icon: ComponentType<IconProps>) => {
+        return (
+            <Icon
+                className={`${props.value ? 'text-blue-500' : ''} pointer-events-none absolute top-1/2 -translate-y-1/2 icon left-2 opacity-30 transition-colors`}
+            />
+        );
+    };
+
     return (
         <div>
             {props.label && (
@@ -27,7 +36,7 @@ const Input = (props: InputProps) => {
             )}
 
             <div className="relative">
-                <i></i>
+                {props.icon && InputIcon(props.icon)}
 
                 <input
                     type={props.type}
@@ -35,7 +44,7 @@ const Input = (props: InputProps) => {
                     disabled={props.disabled}
                     placeholder={props.placeholder}
                     onChange={props.onChange}
-                    className="input"
+                    className={`${props.icon ? '!pl-10' : ''} input`}
                 />
 
                 {props.loading && (

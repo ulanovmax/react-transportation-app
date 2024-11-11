@@ -11,6 +11,7 @@ interface Props {
 }
 
 const RequestLinkCard = ({ to, title, description, type }: Props) => {
+    console.log('card');
     return (
         <Link
             className={`card-type bordered max-xs:max-w-full w-full max-w-96 cursor-pointer overflow-hidden rounded-md shadow-lg`}
