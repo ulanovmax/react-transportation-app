@@ -46,9 +46,11 @@ const CitySearch = (props: Props) => {
     };
 
     const onSelect = (city: ICity) => {
-        setSearchValue(`${city.name} (${city.country})`);
+        const value = `${city.name} (${city.country})`;
 
-        props.onSelect(searchValue);
+        setSearchValue(value);
+
+        props.onSelect(value);
 
         setDropdownShow(false);
     };

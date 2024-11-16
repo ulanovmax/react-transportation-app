@@ -14,7 +14,8 @@ export interface InputProps {
     error?: string;
     required?: boolean;
     disabled?: boolean;
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    className?: string;
 }
 
 const Input = (props: InputProps) => {
@@ -27,7 +28,7 @@ const Input = (props: InputProps) => {
     };
 
     return (
-        <div>
+        <div className={`${props.className ?? ''}`}>
             {props.label && (
                 <label className="mb-2 text-base font-semibold">
                     {props.label}

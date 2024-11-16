@@ -7,9 +7,7 @@ import CreateRequestLayout from '@/components/layout/CreateRequestLayout.tsx';
 const CreateOrderPage = () => {
     const [isModalOpen, setModalOpen] = useState(false);
 
-    const onSubmit = () => {
-        console.log('submit');
-    };
+    const onSubmit = () => {};
 
     const header = (
         <>
