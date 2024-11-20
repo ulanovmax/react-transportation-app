@@ -1,6 +1,9 @@
 import { InputProps } from '@/components/form/input/Input.tsx';
+import { ChangeEvent } from 'react';
 
-type Props = Pick<InputProps, 'placeholder' | 'label' | 'value' | 'required' | 'onChange' | 'className'>;
+interface Props extends Pick<InputProps, 'placeholder' | 'label' | 'value' | 'required' | 'className'> {
+    onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+}
 
 const Textarea = (props: Props) => {
     return (

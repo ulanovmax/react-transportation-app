@@ -14,7 +14,7 @@ export interface InputProps {
     error?: string;
     required?: boolean;
     disabled?: boolean;
-    onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
     className?: string;
 }
 

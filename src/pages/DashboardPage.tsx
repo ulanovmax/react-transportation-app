@@ -1,6 +1,7 @@
 import Button from '@/components/form/button/Button.tsx';
 import { IconPlus } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
+import DashboardRequests from '@/components/lists/DashboardRequests.tsx';
 
 const RequestsPage = () => {
     const navigate = useNavigate();
@@ -17,6 +18,8 @@ const RequestsPage = () => {
                     <IconPlus />
                 </Button>
             </div>
+
+            <DashboardRequests />
         </>
     );
 };
